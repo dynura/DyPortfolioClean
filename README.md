@@ -29,7 +29,7 @@ A modern, responsive personal portfolio built with React, Vite, and Tailwind CSS
 ### Installation
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/dynura/personal-portfolio.git](https://github.com/dynura/personal-portfolio.git)
+   git clone https://github.com/dynura/personal-portfolio.git
    cd personal-portfolio
    ```
 2. Install dependencies:

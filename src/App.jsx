@@ -7,9 +7,6 @@ import TechStack from './components/TechStack';
 import ProjectDetailModal from './components/ProjectDetailModal';
 import ProjectsModal from './components/ProjectsModal';
 
-import avatar1 from './assets/avatar1.jpg';
-import avatar2 from './assets/avatar2.jpg';
-
 import { allProjectsList } from './data/projects';
 import { experiences, education, certificates, highlights } from './data/portfolioData';
 
@@ -145,12 +142,12 @@ export default function App() {
             </div>
 
             <img 
-              src={avatar1} 
+              src="https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784794634/avatar1_pnmylb.jpg"
               alt="Avatar Default" 
               className="mosaic-text-default absolute inset-0 w-full h-full object-cover rounded-full"
             />
             <img 
-              src={avatar2} 
+              src="https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784794626/IMG_WHITE_BG_2025_mifc0m.png" 
               alt="Avatar Hover" 
               className="mosaic-text-hover absolute inset-0 w-full h-full object-cover rounded-full opacity-0 z-30"
             />
@@ -181,7 +178,7 @@ export default function App() {
                 >
                   <div className="w-full h-36 rounded-2xl mb-4 overflow-hidden bg-mono-light-200 dark:bg-mono-dark-300 shadow-sm">
                     <img 
-                      src={proj.image} 
+                      src={proj.images?.[0] || proj.image}
                       alt={proj.title} 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
                     />
