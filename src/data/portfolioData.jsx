@@ -1,4 +1,3 @@
-// src/data/portfolioData.js
 import React from 'react';
 import { 
     SiTypescript, SiJavascript, SiReact, SiTailwindcss, SiPython, 
@@ -69,28 +68,28 @@ export const education = [
     {
         degree: 'Bachelor in Software Engineering (Hons)',
         institution: 'Universiti Malaysia Sarawak (UNIMAS)',
-        cgpa: '3.71 / 4.00',
+        result: ' CGPA 3.71',
         period: '2021 - 2025',
         details: 'Focused on advanced software architecture, full-stack web development, database systems, and agile engineering principles.'
     },
     {
         degree: 'Foundation in Physical Science',
         institution: 'Universiti Malaysia Sarawak (UNIMAS)',
-        cgpa: '3.32 / 4.00',
+        result: ' CGPA 3.32',
         period: '2020 - 2021',
         details: 'Core preparation in advanced mathematics, computational science, and fundamental physics principles.'
     },
     {
         degree: 'Malaysia Universiti English Test (MUET)',
         institution: 'Universiti Malaysia Sarawak (UNIMAS)',
-        cgpa: 'Band 4.5',
+        result: 'Band 4.5',
         period: '2021',
         details: 'Achieved Band 4.5 demonstrating high proficiency in academic English, effective written communication, and professional spoken articulation.'
     },
     {
         degree: 'Sijil Pelajaran Malaysia (SPM)',
         institution: 'Kolej Datu Patinggi Abang Haji Abdillah',
-        cgpa: '6A 3B',
+        result: '6A 3B',
         period: '2019',
         details: 'Completed Pure Science stream education with a strong foundation in Additional Mathematics, Physics, Chemistry, and English.'
     }
@@ -108,26 +107,26 @@ export const highlights = [
     {
         title: 'Frontend Web Applications & UI Components (roadmap.sh)',
         description: 'Developed a suite of 15+ responsive UI components focusing on strict web standards, semantics, and high accessibility (including Accessible Form UI, Cookie Consent banners, Tabs, and Accordions). Engineered dynamic applications like a Weather Web App with live API integration and an interactive browser-based Quiz App built with modern JavaScript frameworks (ReactJS, Vite, and Tailwind CSS) to manage complex state and scoring logic.',
-        image: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=600&q=80',
+        image: 'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784858021/frontend-example_ercv6y.png',
     },
     {
         title: 'Backend APIs & Command-Line Utilities (roadmap.sh)',
         description: 'Engineered a collection of RESTful services and CLI utilities to master core backend architecture. Built scalable micro-services including a Weather API and a Blogging Platform API for full CRUD lifecycle management. Developed command-line applications like Task Tracker, Expense Tracker, and GitHub User Activity fetchers to process raw data formats, manage local storage, and integrate third-party APIs efficiently.',
-        image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=600&q=80',
+        image: 'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784858022/backend-example_xrbtp0.png',
     },
     {
         title: 'Report Conversion - Legacy (FO/XSL)/Birt to JasperReport',
         description: 'Successfully completed all assigned report conversions from FO/XSL to JasperReports. Prior to training completion, 3 reports were deployment-ready, while 8 reports progressed through Quality Control (4 under active QC and 4 queued), demonstrating consistent delivery and adherence to enterprise workflows.',
-        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80',
+        image: 'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784857116/jaspersoft-example_ryobcz.jpg',
     },
     {
         title: 'Hackathon Recognition – HackWKND Kota Samarahan',
         description: 'Awarded Most Accessible Solution for developing a web‑based educational platform supporting learners with dyslexia, dysgraphia, and dyscalculia. Focused on accessibility‑first design, adaptive content presentation, and user‑friendly navigation to improve outcomes for neurodivergent users.',
-        image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80',
+        image: 'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784857116/1733706837957_i7ovqy.jpg',
     },
     {
         title: 'Crowdsourced Study Material App',
         description: 'Contributed to frontend and integration tasks for a scalable, AI‑driven quiz app using Flutter, Firebase, and TensorFlow Lite which is a centralized space for students to share study materials, generate quizzes using AI, and collaborate in real-time.',
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80',
+        image: 'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784790624/13_kodybv.png',
     }
 ];
