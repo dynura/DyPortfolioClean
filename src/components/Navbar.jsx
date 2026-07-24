@@ -10,7 +10,7 @@ const NAV_ITEMS = [
   { id: 'contact', label: 'Contact', href: '#contact' },
 ];
 
-export default function Navbar({ activeTab, setActiveTab }) {
+export default function Navbar({ activeTab, setActiveTab, isManualScrolling }) {
   const [hoveredTab, setHoveredTab] = useState(null);
   const [pillStyle, setPillStyle] = useState({ left: 0, width: 0 });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,25 +41,35 @@ export default function Navbar({ activeTab, setActiveTab }) {
 
   const handleNavClick = (e, item) => {
     e.preventDefault();
+    
+    // Disable IntersectionObserver lock temporarily
+    if (isManualScrolling) isManualScrolling.current = true;
+
     setActiveTab(item.id);
     setMobileMenuOpen(false);
     
-    const targetEl = document.querySelector(item.href);
+    const targetEl = document.getElementById(item.id) || document.querySelector(item.href);
+    
     if (targetEl) {
       targetEl.scrollIntoView({ behavior: 'smooth' });
     }
+
+    // Release the observer lock after smooth scroll finishes (~800ms)
+    setTimeout(() => {
+      if (isManualScrolling) isManualScrolling.current = false;
+    }, 800);
   };
 
   return (
     <>
-      {/* Desktop Navigation (Strictly hidden below lg screen width 1024px) */}
+     {/* Desktop Navigation */}
       <nav
         ref={navRef}
-        className="hidden lg:inline-flex items-center nav-pill-container font-sans shadow-sm flex-shrink-0"
+        className="relative hidden lg:inline-flex items-center nav-pill-container font-sans shadow-sm flex-shrink-0"
         onMouseLeave={() => setHoveredTab(null)}
       >
         <div
-          className="nav-sliding-pill"
+          className="nav-sliding-pill pointer-events-none absolute top-0 bottom-0 transition-all duration-300"
           style={{
             transform: `translateX(${pillStyle.left}px)`,
             width: `${pillStyle.width}px`,
@@ -79,7 +89,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
               }}
               onClick={(e) => handleNavClick(e, item)}
               onMouseEnter={() => setHoveredTab(item.id)}
-              className={`relative z-10 px-4 py-1.5 text-xs font-semibold no-underline transition-colors duration-300 flex items-center justify-center font-sans ${
+              className={`relative z-20 px-4 py-1.5 text-xs font-semibold no-underline transition-colors duration-300 flex items-center justify-center font-sans cursor-pointer ${
                 isCurrent
                   ? 'text-mono-light-base dark:text-mono-dark-900 font-bold'
                   : 'text-mono-light-500 dark:text-mono-dark-500 hover:text-mono-light-900 dark:hover:text-mono-dark-900'
@@ -91,7 +101,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
         })}
       </nav>
 
-      {/* Mobile/Tablet Hamburger Toggle Button (Strictly shown below lg screen width 1024px) */}
+      {/* Mobile/Tablet Hamburger Toggle Button */}
       <button
         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         className="lg:hidden p-2.5 rounded-full bg-mono-light-100 dark:bg-mono-dark-100 text-mono-light-900 dark:text-mono-dark-900 hover:opacity-80 transition-opacity cursor-pointer border-none shadow-sm flex-shrink-0 flex items-center justify-center"

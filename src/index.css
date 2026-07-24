@@ -87,7 +87,7 @@ body {
   border-radius: 9999px;
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), width 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   pointer-events: none;
-  z-index: 0;
+  z-index: 1;
 }
 
 .dark .nav-sliding-pill {
