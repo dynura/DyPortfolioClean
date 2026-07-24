@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Sun, Moon, Mail, ExternalLink, ArrowUp, FileText } from 'lucide-react';
 import { SiGithub } from 'react-icons/si';
 
@@ -29,8 +29,12 @@ export default function App() {
   const [selectedProject, setSelectedProject] = useState(null);
   const [isSelectedProjectClosing, setIsSelectedProjectClosing] = useState(false);
 
+  const isManualScrolling = useRef(false);
+
   useEffect(() => {
     const handleScroll = () => {
+      if (isManualScrolling.current) return; // Skip during manual nav click
+
       if (window.scrollY < 120) {
         setActiveTab('home');
         return;
@@ -43,6 +47,8 @@ export default function App() {
     const observerOptions = { root: null, rootMargin: '-20% 0px -50% 0px', threshold: 0.1 };
 
     const observerCallback = (entries) => {
+      if (isManualScrolling.current) return; // Skip observer updates during click scroll
+
       entries.forEach((entry) => {
         if (entry.isIntersecting && window.scrollY >= 120) {
           setActiveTab(entry.target.id);
@@ -121,7 +127,11 @@ export default function App() {
           </span>
 
           <div className="flex items-center gap-2.5 sm:gap-4 flex-shrink-0">
-            <Navbar activeTab={activeTab} setActiveTab={setActiveTab} />
+            <Navbar 
+              activeTab={activeTab} 
+              setActiveTab={setActiveTab} 
+              isManualScrolling={isManualScrolling} 
+            />
             
             <button 
               onClick={toggleDarkMode} 
