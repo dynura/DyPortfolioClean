@@ -73,7 +73,15 @@ export const allProjectsList = [
         title: 'Quiz Application', 
         desc: 'An interactive browser-based quiz app built with modern frontend frameworks to manage state, scoring logic, and dynamic questions.', 
         tags: ['React', 'Vite', 'Tailwind CSS', 'State Management'],
-        image: DEFAULT_IMG,
+        images: [
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784869601/Screenshot_2026-07-24_130244_lqdyj2.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784869602/Screenshot_2026-07-24_130357_m04wxy.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784869604/Screenshot_2026-07-24_130405_nk5fkt.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784869611/Screenshot_2026-07-24_130446_cxvuzs.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784869613/Screenshot_2026-07-24_130451_p1wlt8.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784869606/Screenshot_2026-07-24_130430_xwijjx.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784869609/Screenshot_2026-07-24_130436_yke9ca.png',
+        ],
         github: 'https://github.com/dynura/quiz-app-rm'
     },
     { 
@@ -103,8 +111,19 @@ export const allProjectsList = [
         title: 'Blogging Platform API', 
         desc: 'A RESTful API suite supporting complete CRUD operations, category filtering, and post management for blogging applications.', 
         tags: ['REST API', 'Backend', 'Node.js', 'Express.js'],
-        image: DEFAULT_IMG,
-        github: 'https://github.com/dynura'
+        images: [
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784869040/Screenshot_2026-07-24_123502_ztshel.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784869016/Screenshot_2026-07-24_122020_xtmgzn.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784868965/Screenshot_2026-07-24_122637_navta3.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784868665/Screenshot_2026-07-24_123353_akrskn.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784868664/Screenshot_2026-07-24_123318_xsmebw.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784868663/Screenshot_2026-07-24_123258_hekbis.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784868662/Screenshot_2026-07-24_123140_zczdiy.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784868661/Screenshot_2026-07-24_122357_qyleza.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784868661/Screenshot_2026-07-24_122548_j0l48k.png',
+            'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784868659/Screenshot_2026-07-24_122040_egpp8j.png',
+        ],
+        github: 'https://github.com/dynura/blogging-platform-api-rm'
     },
     { 
         id: 10, 
