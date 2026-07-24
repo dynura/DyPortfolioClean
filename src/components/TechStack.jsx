@@ -1,10 +1,11 @@
-// src/components/TechStack.jsx
 import React from 'react';
 import { techRows } from '../data/portfolioData';
 
+import ScrollSection from './ScrollSection';
+
 export default function TechStack() {
     return (
-        <section id="skills" className="my-20 md:my-20 px-6 font-sans transition-all duration-500">
+        <ScrollSection id="skills" className="my-20 md:my-20 px-6 font-sans transition-all duration-500">
         <h2 className="text-2xl font-bold mb-8 font-sans">Tools & Technologies</h2>
         
         <div className="flex flex-col gap-6 py-4">
@@ -21,6 +22,6 @@ export default function TechStack() {
             </div>
             ))}
         </div>
-        </section>
+        </ScrollSection>
     );
 }

@@ -14,7 +14,7 @@ export const allProjectsList = [
     { 
         id: 2, 
         title: 'cookinghabit.kch Web App', 
-        desc: 'A web application built for a client bakery to showcase products, discover recipes, and streamline customer order management.', 
+        desc: 'A web application built for a client home-based business to showcase products, discover recipes, and streamline customer order management.', 
         tags: ['Web App', 'PHP', 'Client Project', 'Bakery'],
         images: [
             'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784790301/cookinghabit1_pqivcw.png',
@@ -118,7 +118,7 @@ export const allProjectsList = [
         id: 11, 
         title: 'Personal Blog Web App', 
         desc: 'A dynamic server-side rendering, session authentication, and automated date tracking', 
-        tags: ['NodeJS', 'Express', 'CSS', 'Backend'],
+        tags: ['Node.js', 'Express', 'CSS', 'Backend'],
         images: [
             'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784794094/Screenshot_2026-07-23_160622_qyrmak.png',
             'https://res.cloudinary.com/dt2j9qzxy/image/upload/v1784794095/Screenshot_2026-07-23_160631_t3hel5.png',

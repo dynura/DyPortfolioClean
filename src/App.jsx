@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Sun, Moon, Mail, ExternalLink, ArrowUp, FileText } from 'lucide-react';
 import { SiGithub } from 'react-icons/si';
 
+import ScrollSection from './components/ScrollSection';
 import Navbar from './components/Navbar';
 import TechStack from './components/TechStack';
 import ProjectDetailModal from './components/ProjectDetailModal';
@@ -133,7 +134,7 @@ export default function App() {
         </header>
 
         {/* 1. Hero Section */}
-        <section id="home" className="flex flex-col md:flex-row items-start gap-8 my-16 md:my-20 px-20 font-sans transition-all duration-500">
+        <ScrollSection id="home" className="flex flex-col md:flex-row items-start gap-8 my-16 md:my-20 px-20 font-sans transition-all duration-500">
           <div className="mosaic-avatar-box w-28 h-28 border-2 border-mono-light-900 dark:border-mono-dark-300 shadow-md flex-shrink-0 cursor-pointer bg-mono-light-100 dark:bg-mono-dark-100 flex items-center justify-center relative">
             <div className="mosaic-pixel-grid">
               {Array.from({ length: 16 }).map((_, i) => (
@@ -162,10 +163,10 @@ export default function App() {
               I build responsive web applications, accessible user interfaces, and robust backend services. Passionate about turning complex requirements into clean, scalable software using modern web and mobile frameworks.
             </p>
           </div>
-        </section>
+        </ScrollSection>
 
         {/* 2. Projects Section */}
-        <section id="projects" className="px-6 my-20 md:my-20 font-sans transition-all duration-500">
+        <ScrollSection id="projects" className="px-6 my-20 md:my-20 font-sans transition-all duration-500">
           <div className="curved-inward-card bg-mono-light-900 dark:bg-mono-dark-100 text-mono-light-base dark:text-mono-dark-900 p-6 sm:p-12 shadow-xl">
             <h2 className="text-2xl font-bold mb-8 font-sans text-mono-light-base dark:text-mono-dark-900">Projects</h2>
             
@@ -206,10 +207,10 @@ export default function App() {
               </button>
             </div>
           </div>
-        </section>
+        </ScrollSection>
 
         {/* 3. Experience Section */}
-        <section id="experience" className="my-20 md:my-20 px-6 text-center font-sans transition-all duration-500">
+        <ScrollSection id="experience" className="my-20 md:my-20 px-6 text-center font-sans transition-all duration-500">
           <h2 className="text-2xl font-bold mb-16 font-sans">Experience</h2>
           
           <div className="relative max-w-2xl mx-auto">
@@ -235,13 +236,13 @@ export default function App() {
               ))}
             </div>
           </div>
-        </section>
+        </ScrollSection>
 
         {/* 4. Tools & Technologies Section */}
         <TechStack />
 
         {/* 5. Education Section */}
-        <section id="education" className="my-20 md:my-20 px-6 font-sans transition-all duration-500">
+        <ScrollSection id="education" className="my-20 md:my-20 px-6 font-sans transition-all duration-500">
           <h2 className="text-2xl font-bold mb-8 font-sans">Education</h2>
           <div className="space-y-6">
             {education.map((edu, index) => (
@@ -250,7 +251,7 @@ export default function App() {
                   <div>
                     <h3 className="text-base font-bold font-sans">{edu.degree}</h3>
                     <p className="text-xs font-semibold text-mono-light-600 dark:text-mono-dark-500 mt-1 font-sans">{edu.institution}</p>
-                    <span className="text-xs text-mono-light-500 dark:text-mono-dark-500 font-bold block mt-1 font-sans">RESULT {edu.cgpa}</span>
+                    <span className="text-xs text-mono-light-500 dark:text-mono-dark-500 font-bold block mt-1 font-sans">{edu.result}</span>
                   </div>
                   <span className="text-xs text-mono-light-500 dark:text-mono-dark-500 font-sans">{edu.period}</span>
                 </div>
@@ -258,10 +259,10 @@ export default function App() {
               </div>
             ))}
           </div>
-        </section>
+        </ScrollSection>
 
         {/* 6. Certificates Section */}
-        <section className="my-20 md:my-20 px-6 font-sans transition-all duration-500">
+        <ScrollSection className="my-20 md:my-20 px-6 font-sans transition-all duration-500">
           <h2 className="text-2xl font-bold mb-6 font-sans">Certificates</h2>
           <ul className="divide-y divide-mono-light-200 dark:divide-mono-dark-200">
             {certificates.map((cert, index) => (
@@ -274,10 +275,10 @@ export default function App() {
               </li>
             ))}
           </ul>
-        </section>
+        </ScrollSection>
 
         {/* 7. Key Highlights Section */}
-        <section id="highlights" className="my-20 md:my-28 px-6 font-sans transition-all duration-500">
+        <ScrollSection id="highlights" className="my-20 md:my-28 px-6 font-sans transition-all duration-500">
           <h2 className="text-2xl font-bold mb-8 font-sans">Key Highlights</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
@@ -307,10 +308,10 @@ export default function App() {
               </div>
             ))}
           </div>
-        </section>
+        </ScrollSection>
 
         {/* 8. GitHub Activity Section */}
-        <section className="my-20 md:my-20 px-6 font-sans transition-all duration-500">
+        <ScrollSection className="my-20 md:my-20 px-6 font-sans transition-all duration-500">
           <h2 className="text-2xl font-bold mb-6 font-sans">GitHub Activity</h2>
           <div className="p-6 md:p-8 bg-mono-light-100 dark:bg-mono-dark-100 rounded-3xl shadow-md flex flex-col items-center justify-center">
             <img 
@@ -322,10 +323,10 @@ export default function App() {
               Live GitHub contribution activity retrieved
             </p>
           </div>
-        </section>
+        </ScrollSection>
 
         {/* 9. Contact Section */}
-        <section id="contact" className="my-20 md:my-28 px-6 font-sans transition-all duration-500">
+        <ScrollSection id="contact" className="my-20 md:my-28 px-6 font-sans transition-all duration-500">
           <div className="curved-inward-card p-6 sm:p-12 bg-mono-light-900 dark:bg-mono-dark-100 text-mono-light-base dark:text-mono-dark-900 shadow-2xl flex flex-col justify-between gap-8">
             <div>
               <h2 className="text-2xl font-bold mb-3 font-sans text-mono-light-base dark:text-mono-dark-900">Let's Build Something Great Together</h2>
@@ -345,7 +346,7 @@ export default function App() {
                 <Mail size={16} /> Email <ExternalLink size={12} />
               </a>
               <a 
-                href="https://drive.google.com/file/d/1gtIQ2tjTn-p6M3KyekjKWL9W4OsV1U7q/view?usp=sharing" 
+                href="https://drive.google.com/file/d/1tEv0oBXHoXQ5qQEH1-cW3L1iJ4bh-q4Y/view?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="flex items-center gap-1.5 text-xs font-semibold px-3.5 py-1.5 rounded-xl bg-mono-light-800 dark:bg-mono-dark-200 text-mono-light-base dark:text-mono-dark-900 hover:bg-mono-light-base dark:hover:bg-mono-dark-900 hover:text-mono-light-900 dark:hover:text-mono-dark-100 transition-all duration-300 shadow-sm"
@@ -354,7 +355,7 @@ export default function App() {
               </a>
             </div>
           </div>
-        </section>
+        </ScrollSection>
 
         {/* Minimal Centered Footer */}
         <footer className="px-6 pt-6 flex justify-center items-center text-center font-sans">
